@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P&L Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 h-screen font-sans">
+    <div class="container mx-auto mt-20 p-6 max-w-xl bg-white rounded-xl shadow-md">
+        <h2 class="text-2xl mb-6 text-center">Profit & Loss Generator</h2>
+
+        <div class="mb-6">
+            <h3 class="text-xl mb-4">Profit and Charges</h3>
+            <div class="mb-4"><label class="mr-2">Customer Charge:</label><input type="number" id="customerCharge" class="p-2 border rounded"></div>
+            <div class="mb-4"><label class="mr-2">PPC:</label><input type="number" id="ppc" class="p-2 border rounded"></div>
+            <div class="mb-4"><label class="mr-2">Equipment Reimbursement:</label><input type="number" id="equipmentReimbursement" class="p-2 border rounded"></div>
+            <div class="mb-4"><label class="mr-2">Dish Reimbursement:</label><input type="number" id="dishReimbursement" value="140" readonly class="p-2 border rounded"></div>
+            <p>Gross Profit: <span id="grossProfit"></span></p>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl mb-4">Costs and Expenses</h3>
+            <div class="mb-4"><label class="mr-2">Hardware Cost:</label><input type="number" id="hardwareCost" class="p-2 border rounded"></div>
+            <div class="mb-4"><label class="mr-2">Installation Charge:</label><input type="number" id="installationCharge" class="p-2 border rounded"></div>
+            <p>Net Profit: <span id="netProfit"></span></p>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl mb-4">Commission</h3>
+            <div class="mb-4"><label class="mr-2">Commission %:</label><input type="number" id="commissionPercent" class="p-2 border rounded"></div>
+            <p>Net Commission: <span id="netCommission"></span></p>
+        </div>
+
+        <button onclick="calculate()" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Calculate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
